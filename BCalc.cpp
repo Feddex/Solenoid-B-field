@@ -2,8 +2,8 @@
 
 #include <vector>
 
-#include "Coil.hpp"
-#include "spiral.hpp"
+
+#include "Spiral.hpp"
 #include "Vec.hpp"
 
 Vec BCalc::dB(Vec const &dTangentVector, Vec const &vect_distance_r,

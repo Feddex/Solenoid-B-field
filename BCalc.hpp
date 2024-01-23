@@ -6,8 +6,7 @@
 #include <iostream>
 #include <vector>
 
-#include "spiral.hpp"
-#include "Coil.hpp"
+#include "Spiral.hpp"
 #include "Vec.hpp"
 
 

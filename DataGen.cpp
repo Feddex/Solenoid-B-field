@@ -6,7 +6,7 @@
 #include <iostream>
 #include <random>
 
-#include "spiral.hpp"
+#include "Spiral.hpp"
 #include "BCalc.hpp"
 
 

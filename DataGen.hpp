@@ -1,7 +1,7 @@
 #ifndef DATAGEN_HPP
 #define DATAGEN_HPP
 
-#include "spiral.hpp"
+#include "Spiral.hpp"
 #include "Vec.hpp"
 
 #include "BCalc.hpp"

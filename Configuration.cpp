@@ -6,7 +6,6 @@
 #include <vector>
 
 #include "BCalc.hpp"
-#include "Coil.hpp"
 #include "DataGen.hpp"
 #include "Vec.hpp"
 

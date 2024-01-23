@@ -1,5 +1,3 @@
-#include "Coil.hpp"
-
 #include <cassert>
 #include <cmath>
 #include <iostream>
@@ -8,7 +6,7 @@
 #include "Configuration.hpp"
 #include "DataGen.hpp"
 #include "Vec.hpp"
-#include "spiral.hpp"
+#include "Spiral.hpp"
 
 // this program computes the B field in a point y given a solenoid whose axe is
 // oriented as the x-axes. if you want to simulate an indefinite solenoid,
