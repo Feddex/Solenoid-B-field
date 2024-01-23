@@ -25,9 +25,9 @@ Vec Coil::pointOnCirc(double alpha) const {
 }
 
 Vec Coil::TangentVersor(Vec const &PointOnCirc) const {
-  Vec CentreToPointVec = dist_vector(PointOnCirc, _Centre);
-  Vec TangentVector = { PointOnCirc.getX(), 
-      -CentreToPointVec.getZ(),
+  Vec CentreToPointVec = VecOperation::dist_vector(PointOnCirc, _Centre);
+  Vec TangentVector = {
+      PointOnCirc.getX(), -CentreToPointVec.getZ(),
       CentreToPointVec
           .getY()};  // it's a perpendicular vector to the previous one, the
                      // norm of this vector is the same of the previous one, if

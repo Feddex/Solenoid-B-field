@@ -14,9 +14,10 @@
 void write_data(std::vector<Coil> const& conf) {
   const int size = conf.size();
   Coil mainCoil =
-      conf[((size + 1) / 2)-1];  // this should hand the central coil which is the
-                             // one whose centre is set to 0,0,0
-  assert(mainCoil.getCentre().getX()==0 && mainCoil.getCentre().getY()==0 && mainCoil.getCentre().getZ()==0 );
+      conf[((size + 1) / 2) - 1];  // this should hand the central coil which is
+                                   // the one whose centre is set to 0,0,0
+  assert(mainCoil.getCentre().getX() == 0 && mainCoil.getCentre().getY() == 0 &&
+         mainCoil.getCentre().getZ() == 0);
   double R = mainCoil.getRadius();
 
   std::default_random_engine eng;
@@ -30,7 +31,7 @@ void write_data(std::vector<Coil> const& conf) {
     double g = roll_dice(eng);
     Vec p{mainCoil.getCentre().getX(), 2 * R * g,
           mainCoil.getCentre().getZ()};  // we take p on the y axis
-    Vec B = tB(conf, p);
+    Vec B = BCalc::tB(conf, p);
 
     of1 << p.getY() << " " << B.getX() << '\n';
     of2 << p.getY() << " " << B.getY() << '\n';

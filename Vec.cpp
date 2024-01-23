@@ -35,23 +35,26 @@ Vec Vec::versor() const { return *this / this->norm(); }
 
 void Vec::print() const { std::cout << _x << " " << _y << " " << _z << '\n'; }
 
-double distance(Vec const &a, Vec const &b) {
+double VecOperation::distance(Vec const &a, Vec const &b) {
   double d = std::sqrt(std::pow(a.getX() - b.getX(), 2) +
                        std::pow(a.getY() - b.getY(), 2) +
                        std::pow(a.getZ() - b.getZ(), 2));
   return d;
 }
 
-Vec dist_vector(Vec const &a, Vec const &b) {
+Vec VecOperation::dist_vector(Vec const &a, Vec const &b) {
   return {a.getX() - b.getX(), a.getY() - b.getY(), a.getZ() - b.getZ()};
 }
 
-Vec crossProuct(Vec const &a, Vec const &b) {
+Vec VecOperation::crossProuct(Vec const &a, Vec const &b) {
   return {a.getY() * b.getZ() - a.getZ() * b.getY(),
           a.getZ() * b.getX() - a.getX() * b.getZ(),
           a.getX() * b.getY() - a.getY() * b.getX()};
 }
 
-
-Vec operator/(double const &a, Vec const& r ) { return {r.getX() / a, r.getY() / a, r.getZ() / a}; }
-Vec operator*(double const &a, Vec const& r ) { return {r.getX() * a, r.getY() * a, r.getZ() * a}; }
+Vec operator/(double const &a, Vec const &r) {
+  return {r.getX() / a, r.getY() / a, r.getZ() / a};
+}
+Vec operator*(double const &a, Vec const &r) {
+  return {r.getX() * a, r.getY() * a, r.getZ() * a};
+}

@@ -28,7 +28,6 @@ int main() {
 
   // MULTIPLE TRIAL
   Coil coil{1, {0, 0, 0}, 1};
-  std::vector<Coil> conf = config1(coil);
+  std::vector<Coil> conf = Configuration::config1(coil);
   write_data(conf);
-
 }

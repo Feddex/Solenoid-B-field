@@ -10,11 +10,12 @@
 #include "DataGen.hpp"
 #include "Vec.hpp"
 
-std::vector<Coil> config1(Coil const& coil) {
+std::vector<Coil> Configuration::config1(Coil const& coil) {
   // this givers the number of coils in the superior half part
   // of the solenoid,so you will have the basic coils whose centre is set at
   // (0,0,0) ad then we will have SupNumOfCoils on the left and SupNumOfCoils
-  // on the right of this one. So in total you will have 2*SupNumOfCoils+1 coils.
+  // on the right of this one. So in total you will have 2*SupNumOfCoils+1
+  // coils.
 
   const int SupNumOfCoils = 1000;
   const double step = 0.01;
