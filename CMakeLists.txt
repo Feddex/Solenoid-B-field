@@ -22,7 +22,7 @@ string(APPEND CMAKE_EXE_LINKER_FLAGS_DEBUG " -fsanitize=address,undefined -fno-o
 
 
 #find_package(SFML 2.5 COMPONENTS system window graphics)
-add_executable(coil coil.cpp Coil.cpp BCalc.cpp Vec.cpp Configuration.cpp DataGen.cpp )
+add_executable(coil coil.cpp spiral.cpp BCalc.cpp Vec.cpp Configuration.cpp DataGen.cpp )
 
 #target_link_libraries(gravity PRIVATE sfml-graphics sfml-system sfml-window)
 

@@ -1,9 +1,12 @@
 #ifndef DATAGEN_HPP
 #define DATAGEN_HPP
 
+#include "spiral.hpp"
 #include "Vec.hpp"
-#include "Coil.hpp"
+
 #include "BCalc.hpp"
+
+
 
 
 #include <cassert>
@@ -13,6 +16,6 @@
 #include <random>
 
 
-void write_data(std::vector<Coil> const& conf);
+void write_data(Spiral const& spiral);
 
 #endif
