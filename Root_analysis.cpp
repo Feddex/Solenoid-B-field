@@ -55,16 +55,16 @@ void graphics() {
   // std::cout<<"fit prob: "<<func->GetProb()<<'\n';
 
   TCanvas *canvas = new TCanvas("canvas", "Graph", 800, 600);
-//   canvas->Divide(3, 1);
-//   canvas->cd(1);
-//   grBx->Draw("AP");
-//   // func->Draw("SAME");
+  canvas->Divide(3, 1);
+  canvas->cd(1);
+  grBx->Draw("AP");
+  // func->Draw("SAME");
 
-//   canvas->cd(2);
+   canvas->cd(2);
   grBy->Draw("AP");
 
-//   canvas->cd(3);
-//   grBz->Draw("AP");
+  canvas->cd(3);
+  grBz->Draw("AP");
 
   canvas->Draw();
 }

@@ -18,19 +18,6 @@
 
 int main() {
   // //SINGLE TRIAL
-  // Coil coil{1, {0, 0, 0}, 1};
-  // std::vector<Coil> conf = config1(coil);
-  // //CHNAGE THE POINT NOT THE CENTRE OF THE COIL
-  // Vec y{0, 0, 0};
-  // Vec B = tB(conf, y);
-  // B.print();
-
-  // MULTIPLE TRIAL
-  // Coil coil{1, {0, 0, 0}, 1};
-  // std::vector<Coil> conf = Configuration::config1(coil);
-  // write_data(conf);
-
-  // //SINGLE TRIAL
   //   Spiral spiral{{0, 0, 0}, 1, 0.001, 100, 1};
   //   Vec y{0, 1.1, 0};
   //   Vec B = BCalc::pB(y, spiral);
