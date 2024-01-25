@@ -18,12 +18,13 @@
 
 int main() {
   // //SINGLE TRIAL
-  //   Spiral spiral{{0, 0, 0}, 1, 0.001, 100, 1};
-  //   Vec y{0, 1.1, 0};
+  //   Spiral spiral{{0, 0, 0}, 1, 0.01, 5, 1};
+  //   Vec y{0, 0, 0};
   //   Vec B = BCalc::pB(y, spiral);
   //   B.print();
+    
 
-  // MULTIPLE TRIAL
+//   // MULTIPLE TRIAL
   Spiral spiral{{0, 0, 0}, 1, 0.01, 5, 1};
   write_data(spiral);
 }
