@@ -2,7 +2,6 @@
 
 #include <vector>
 
-
 #include "Spiral.hpp"
 #include "Vec.hpp"
 
@@ -17,20 +16,29 @@ Vec BCalc::dB(Vec const &dTangentVector, Vec const &vect_distance_r,
 }
 
 Vec BCalc::pB(Vec const &y, Spiral const &spiral) {
-  double tMax= spiral.getSupNumOfCoils();//this is the max value we can assign to paramter t, the minimum value is -tMax because the spiral is simetric with respect to the centre
-  double t=-tMax;
+  double tMax =
+      spiral.getSupNumOfCoils();  // this is the max value we can assign to
+                                  // paramter t, the minimum value is -tMax
+                                  // because the spiral is simetric with respect
+                                  // to the centre
+  double t = -tMax;
   Vec B = {0, 0, 0};
   double I = spiral.getI();
   double arc_len = spiral.getInfinitesimalArchLenght(dt);
   while (t < tMax) {
+    std::cout << " \n t: " << t << '\n';
     // this is the point on the circumference
     Vec pointOnSpiral = spiral.getPointOnSpiral(t);
+    std::cout << "punto sulla spira: " << t << '\n';
+    pointOnSpiral.print();
     Vec tangentVersor = spiral.getTanegtVersor(t);
     Vec dTangentVector = tangentVersor * arc_len;
     // vector distance between the point on the circ and
     // the point y where I want to mesure the B field
     Vec vect_distance_r = VecOperation::dist_vector(y, pointOnSpiral);
     B += dB(dTangentVector, vect_distance_r, I);
+    std::cout << "B: " ;
+    B.print();
     t += dt;
   }
   return B;
