@@ -1,0 +1,48 @@
+[33mcommit 36b5be0c8e3c6d4e7962736d4bcd829b0180a772[m[33m ([m[1;36mHEAD -> [m[1;32mspiral_solenoid[m[33m, [m[1;31morigin/spiral_solenoid[m[33m)[m
+Author: Feddex <129280581+Feddex@users.noreply.github.com>
+Date:   Wed Jan 24 00:11:23 2024 +0100
+
+    Delete spiral.hpp
+
+[33mcommit 6f954785137c2c74a6b5d8df730c6e4a1754dca8[m
+Author: Feddex <129280581+Feddex@users.noreply.github.com>
+Date:   Wed Jan 24 00:11:12 2024 +0100
+
+    Delete spiral.cpp
+
+[33mcommit b00b140589631700cba62684d71cf773b8378583[m
+Author: Feddex <129280581+Feddex@users.noreply.github.com>
+Date:   Wed Jan 24 00:10:45 2024 +0100
+
+    Delete Coil.hpp
+
+[33mcommit 02eddb476eb24cbfc5baaf4e15baa3bc6af1e05e[m
+Author: Feddex <129280581+Feddex@users.noreply.github.com>
+Date:   Wed Jan 24 00:10:27 2024 +0100
+
+    Delete Coil.cpp
+
+[33mcommit 7443c1adf13fa801ea29e7a54c77d9d18e2ee9a9[m
+Author: Federico Mastroforti <federico.mastroforti@studio.unibo.it>
+Date:   Wed Jan 24 00:07:18 2024 +0100
+
+    making some general adjustments
+
+[33mcommit 565ad16c712d079dc269d11f9ac4684e72e182bd[m
+Author: Federico Mastroforti <federico.mastroforti@studio.unibo.it>
+Date:   Tue Jan 23 23:56:10 2024 +0100
+
+    uploading new model of the solenoid
+
+[33mcommit 6a04dbf324f44a7f480b3e1855c28a6f9feba7ea[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: Federico Mastroforti <federico.mastroforti@studio.unibo.it>
+Date:   Tue Jan 23 17:04:50 2024 +0100
+
+    adding .clang_format file and fixing some static functions
+
+[33mcommit 19929f994f7af5e2daef1275116bf87999dc4f7e[m
+Author: Federico Mastroforti <federico.mastroforti@studio.unibo.it>
+Date:   Mon Jan 22 23:50:58 2024 +0100
+
+    committing files
+
