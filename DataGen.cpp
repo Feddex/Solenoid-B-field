@@ -6,23 +6,22 @@
 #include <iostream>
 #include <random>
 
-#include "Spiral.hpp"
 #include "BCalc.hpp"
-
-
+#include "Spiral.hpp"
 #include "Vec.hpp"
-
 
 void write_data(Spiral const& spiral) {
   // const int size = conf.size();
   // Coil mainCoil =
-  //     conf[((size + 1) / 2) - 1];  // this should hand the central coil which is
+  //     conf[((size + 1) / 2) - 1];  // this should hand the central coil which
+  //     is
   //                                  // the one whose centre is set to 0,0,0
-  // assert(mainCoil.getCentre().getX() == 0 && mainCoil.getCentre().getY() == 0 &&
+  // assert(mainCoil.getCentre().getX() == 0 && mainCoil.getCentre().getY() == 0
+  // &&
   //        mainCoil.getCentre().getZ() == 0);
   // double R = mainCoil.getRadius();
 
-  double R=spiral.getRadius();
+  double R = spiral.getRadius();
 
   std::default_random_engine eng;
   std::uniform_real_distribution<> roll_dice(0., 1.);
@@ -35,6 +34,9 @@ void write_data(Spiral const& spiral) {
     double g = roll_dice(eng);
     Vec p{spiral.getCentre().getX(), 2 * R * g,
           spiral.getCentre().getZ()};  // we take p on the y axis
+    
+    // Vec p{spiral.getCentre().getX() + g * spiral.getSupHalfLenght(),
+    //       spiral.getCentre().getY(), spiral.getCentre().getZ()};
     Vec B = BCalc::pB(p, spiral);
 
     of1 << p.getY() << " " << B.getX() << '\n';
