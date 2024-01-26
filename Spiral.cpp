@@ -26,6 +26,7 @@ double Spiral::getFixedRadius() const { return _FixedRadius; }
 double Spiral::getElicoidalStep() const { return _ElicoidalStep; }
 double Spiral::getI() const { return _I; }
 double Spiral::getSupHalfLenght() const { return _SupHalfLenght; }
+
 double Spiral::getRadius(double const &t) const {
   //custom function tha determs the radius size of the solenoid, it's a fuction of t, the parameter of the parametrization of the curve
   return _FixedRadius*(std::sin(2*M_PI*t)+1);
@@ -45,12 +46,14 @@ double Spiral::getNumOfCoils() const {
   return (_SupHalfLenght / _ElicoidalStep) * 2;
 }
 double Spiral::getSupNumOfCoils() const { return getNumOfCoils() / 2; }
-Vec Spiral::getPointOnSpiral(double const &t) const {
+
+
+Vec ClassicSolenoid::getPointOnSpiral(double const &t) const {
   return {_ElicoidalStep * t + _Centre.getX(),
           this->getRadius(t) * std::cos(2 * M_PI * t) + _Centre.getY(),
           this->getRadius(t) * std::sin(2 * M_PI * t) + _Centre.getZ()};
 }
-Vec Spiral::getTanegtVersor(double const &t) const {
+Vec ClassicSolenoid::getTanegtVersor(double const &t) const {
   Vec gradient{
       _ElicoidalStep, -2 * M_PI * _FixedRadius * std::sin(2 * M_PI * t),
       2 * M_PI * _FixedRadius *
@@ -60,7 +63,7 @@ Vec Spiral::getTanegtVersor(double const &t) const {
   return gradient.versor();
 }
 
-double Spiral::getInfinitesimalArchLenght(double const &dt) const {
+double ClassicSolenoid::getInfinitesimalArchLenght(double const &dt) const {
   return std::sqrt(std::pow(_ElicoidalStep, 2) +
                    std::pow(2 * M_PI * _FixedRadius, 2)) *
          dt;

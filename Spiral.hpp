@@ -12,7 +12,7 @@
 // by the vector _Cntre so it will be simmetrical with respect to that point
 
 class Spiral {
- private:
+ protected:
   Vec _Centre;
   double _FixedRadius;
   double _ElicoidalStep;  // this is actually the distance of two consecutive
@@ -49,6 +49,10 @@ class Spiral {
       const;  // this is the number of coils in the superior part of the
               // solenoid, it's also equivalent to the max value of the
               // parameter t in the parametrization of the elic-line
+};
+
+class ClassicSolenoid : public Spiral {
+ public:
   Vec getPointOnSpiral(double const &t)
       const;  // this functions returns a point on the sprial, this is the
               // evaluation of the parametrization of the curve at point t
@@ -60,6 +64,13 @@ class Spiral {
       const;  // this function return the infinitesimal arch lenght of the
               // spiral between to points P(t) and P(t+dt) where P is the
               // parametrization of the spiral
+};
+
+class SinusoidalSolenoid : public Spiral {
+    protected: 
+    
+    
+
 };
 
 #endif
